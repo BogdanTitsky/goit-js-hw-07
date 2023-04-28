@@ -49,6 +49,7 @@ function onClickGalleryItem(event) {
     function onKeyDownESC(event) {
         if (event.code === 'Escape' && instance) {
             instance.close();
+            document.removeEventListener('keydown', onKeyDownESC);
         }
     }
 }
